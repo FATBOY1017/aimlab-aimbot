@@ -10,4 +10,4 @@
 
 3.第一次启动要下载模型，运行可能会慢一些,按shift启动，在按shift暂停，q为退出
 
-
+![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/1.png)
