@@ -7,6 +7,8 @@
 1.下载好对应你显卡的CUDA  cnDNN  torch  *(如果你不会安装，只能说你还得练)*
 
 [这有教程](https://blog.csdn.net/weixin_51756104/article/details/124398722)
+我建议安装torch的时候在pycharm的command prompt下安装 *(直接cmd也行，我也不知道会不会报错)*
+
 
 2.运行  *（假如你安装正确，第一次会自动下载YOLO模型）*
 
