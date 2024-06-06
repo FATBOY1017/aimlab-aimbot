@@ -23,10 +23,10 @@
 
 ![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/4.png)
 ![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/2.png)
-![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/3.png)
+![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/5.png)
 
 先启动游戏，进入游戏后控制灵敏度改为1.4
-推荐使用“jett Knives”这个武器来做测试，因为手部会挡住目标影响推理
+建议隐藏武器和手，因为手部会挡住目标影响推理
 
 只是初次接触python随便写着玩的  *（后期也不会更新）*
 
