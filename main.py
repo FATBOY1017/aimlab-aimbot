@@ -7,6 +7,8 @@ import pygetwindow as gw
 from PIL import ImageGrab
 import numpy as np
 import keyboard
+import win32api, win32con
+import time
 
 WINDOW_TITLE = 'aimlab_tb'
 CONFIDENCE_THRESHOLD = 0.2
@@ -64,6 +66,11 @@ while True:
                         move_y = screen_y - current_mouse_y
 
                         pydirectinput.moveRel(move_x, move_y, relative=True)
+
+                        # 点击左键
+                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                        time.sleep(0.01)  # 短暂延迟
+                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
                         cvzone.putTextRect(img, f'{currentClass} {conf}', (max(0, x1), max(35, y1)),
                                            scale=1, thickness=1, offset=5)
