@@ -22,7 +22,6 @@
 3.第一次启动要下载模型，运行可能会慢一些,按shift启动，在按shift暂停，q为退出   *（不习惯按键可以自己改）*
 
 ![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/4.png)
-![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/2.png)
 ![Images](https://github.com/jinhui20201994/aimlab-aimbot/blob/main/Images/5.png)
 
 先启动游戏，进入游戏后控制灵敏度改为1.4
