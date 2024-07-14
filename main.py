@@ -9,6 +9,7 @@ import numpy as np
 import keyboard
 import win32api, win32con
 import time
+import threading
 
 WINDOW_TITLE = 'aimlab_tb'
 CONFIDENCE_THRESHOLD = 0.2
@@ -17,16 +18,18 @@ model = YOLO("YOLO-Weights/yolov8l.pt")
 
 running = False
 
+
 def toggle_running():
     global running
-    if not running:
-        running = True
+    running = not running
+    if running:
         print("开始运行.")
     else:
-        running = False
         print("停止.")
 
+
 keyboard.on_press_key('shift', lambda _: toggle_running())
+
 
 def get_window_image(window_title):
     window = gw.getWindowsWithTitle(window_title)[0]
@@ -35,6 +38,11 @@ def get_window_image(window_title):
     img_np = np.array(img)
     img_np = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
     return img_np, window.left, window.top, window.width, window.height
+
+
+def process_image():
+    global running
+
 
 while True:
     if running:
@@ -92,3 +100,6 @@ while True:
 
 cv2.destroyAllWindows()
 keyboard.unhook_all()
+
+thread = threading.Thread(target=process_image)
+thread.start()
