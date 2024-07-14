@@ -14,7 +14,7 @@ import threading
 WINDOW_TITLE = 'aimlab_tb'
 CONFIDENCE_THRESHOLD = 0.2
 
-model = YOLO("YOLO-Weights/yolov8l.pt")
+model = YOLO("YOLO-Weights/yolov8n.pt")
 
 running = False
 
