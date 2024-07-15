@@ -91,8 +91,7 @@ def process_image():
                     move_y = screen_center_y - current_mouse_y
                     pydirectinput.moveRel(move_x, move_y, relative=True)
 
-                resized_img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
-                # cv2.imshow("Image", resized_img)
+
 
 
 
