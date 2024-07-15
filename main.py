@@ -14,7 +14,7 @@ import threading
 WINDOW_TITLE = 'aimlab_tb'
 CONFIDENCE_THRESHOLD = 0.2
 
-model = YOLO("YOLO-Weights/yolov8n.pt")
+model = YOLO("YOLO-Weights/yolov8s.pt")
 
 running = False
 
@@ -75,9 +75,9 @@ while True:
 
                         pydirectinput.moveRel(move_x, move_y, relative=True)
 
-                        # 点击左键
+
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
-                        time.sleep(0.01)  # 短暂延迟
+                        time.sleep(0.01)
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
                         cvzone.putTextRect(img, f'{currentClass} {conf}', (max(0, x1), max(35, y1)),
