@@ -81,6 +81,7 @@ def process_image():
                     time.sleep(0.01)
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
 
+
                 else:
 
                     screen_center_x = window_left + window_width // 2
@@ -93,11 +94,7 @@ def process_image():
                 resized_img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
                 # cv2.imshow("Image", resized_img)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
 
-    cv2.destroyAllWindows()
-    keyboard.unhook_all()
 
 thread = threading.Thread(target=process_image)
 thread.start()
